@@ -1,0 +1,58 @@
+managed implementation in class ZBP_R_56ACONN unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_56ACONN alias Connection
+persistent table z56aconn
+draft table z56dconn
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+
+{
+  field ( readonly )
+  UUID,
+  LocalCreatedAt,
+  LocalCreatedBy,
+  LastChangedAt,
+  LocalLastChangedAt,
+  LocalLastChangedBy;
+
+  field ( numbering : managed )
+  UUID;
+
+  field ( mandatory ) CarrierID, ConnectionID;
+
+  create;
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  action ( features : instance ) switchAirPorts result [1] $self;
+
+  validation checkUnique on save { create; update; }
+
+  //side effects { action switchAirPorts affects $self; }
+
+  mapping for z56aconn
+    {
+      UUID               = uuid;
+      CarrierID          = carrier_id;
+      ConnectionID       = connection_id;
+      AirportFromID      = airport_from_id;
+      CityFrom           = city_from;
+      CountryFrom        = country_from;
+      AirportToID        = airport_to_id;
+      CityTo             = city_to;
+      CountryTo          = country_to;
+      LocalCreatedBy     = local_created_by;
+      LocalCreatedAt     = local_created_at;
+      LocalLastChangedBy = local_last_changed_by;
+      LocalLastChangedAt = local_last_changed_at;
+      LastChangedAt      = last_changed_at;
+    }
+}

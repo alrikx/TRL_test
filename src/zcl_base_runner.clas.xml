@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_BASE_RUNNER</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Base Runner</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+    <WITH_UNIT_TESTS>X</WITH_UNIT_TESTS>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BASE_RUNNER</CLSNAME>
+     <CMPNAME>GETCURRENTDATEANDTIMEFORMATTED</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>determine the current timestamp and returns as string</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BASE_RUNNER</CLSNAME>
+     <CMPNAME>HORIZONTALLINE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>draws a horizontal line on the console</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BASE_RUNNER</CLSNAME>
+     <CMPNAME>LOGIC</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>This method implements your logic</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZCL_BASE_RUNNER</CLSNAME>
+     <CMPNAME>WRITE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>wrapper for out-&gt;write( )</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>LOGIC</CMPNAME>
+     <SCONAME>CX_ROOT</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>any exception not caught, will be handled in the runner.</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
