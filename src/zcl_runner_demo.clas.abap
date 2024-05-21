@@ -18,7 +18,7 @@ CLASS ZCL_RUNNER_DEMO IMPLEMENTATION.
   METHOD logic.
     DATA ls_airport type /dmo/airport.
 
-    write( `Hello World` ).
+    write( `Hello World this is changed by Git` ).
 
     ls_airport = value #( airport_id = 'SAP' city = 'Dokkerland' ).
 
